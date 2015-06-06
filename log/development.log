@@ -1,0 +1,1141 @@
+  [1m[36m (10.7ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (34.9ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateTables (20150606004709)
+  [1m[35m (8.4ms)[0m  CREATE TABLE `tables` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150606004709')
+  [1m[36m (5.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'project'
+  AND fk.table_name = 'tables'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `tables`
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 01:05:54 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by TablesController#index as HTML
+  [1m[35mTable Load (0.3ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 1008ms (Views: 993.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 200.0.118.173 at 2015-06-06 01:05:56 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f15b8971a9789ea66f20e892755dab00a577488187ea8aca06ef02ac577b225d.css?body=1" for 200.0.118.173 at 2015-06-06 01:05:56 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 200.0.118.173 at 2015-06-06 01:05:56 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 200.0.118.173 at 2015-06-06 01:05:56 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 200.0.118.173 at 2015-06-06 01:05:56 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/tables.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.0.118.173 at 2015-06-06 01:05:56 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 01:09:31 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by TablesController#index as HTML
+  [1m[35mTable Load (0.3ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 288ms (Views: 274.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tables/new" for 200.0.118.173 at 2015-06-06 01:09:35 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#new as HTML
+  Rendered tables/_form.html.erb (24.7ms)
+  Rendered tables/new.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 86ms (Views: 79.6ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20150606011645)
+  [1m[35m (13.1ms)[0m  CREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (35.1ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (71.3ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) 
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150606011645')
+  [1m[36m (66.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'project'
+  AND fk.table_name = 'tables'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `tables`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'project'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.3ms)[0m  SHOW CREATE TABLE `users`
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 01:36:34 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.1) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.1) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to DeviseCreateViews (20150606011950)
+  [1m[35m (14.8ms)[0m  CREATE TABLE `views` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (18.9ms)[0m  [1mCREATE UNIQUE INDEX `index_views_on_email`  ON `views` (`email`) [0m
+  [1m[35m (26.0ms)[0m  CREATE UNIQUE INDEX `index_views_on_reset_password_token`  ON `views` (`reset_password_token`) 
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150606011950')
+  [1m[36m (7.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'project'
+  AND fk.table_name = 'tables'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `tables`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'project'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `users`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'project'
+  AND fk.table_name = 'views'
+[0m
+  [1m[35m (0.3ms)[0m  SHOW CREATE TABLE `views`
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 01:37:27 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by TablesController#index as HTML
+Completed 401 Unauthorized in 22ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 200.0.118.173 at 2015-06-06 01:37:28 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 326ms (Views: 305.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/sign_up" for 200.0.118.173 at 2015-06-06 01:37:42 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 200.0.118.173 at 2015-06-06 01:38:11 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+Q5NCL+8Am9Ud6KgHT7VB9seKOGqPUKB3tKXZlPf0WCgogbn1nnka3DZTpRHwzCHzsgZRhra0MoelusMA19wDQ==", "user"=>{"email"=>"carlos@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (7.0ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'carlos@gmail.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 173ms (Views: 48.3ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/users" for 200.0.118.173 at 2015-06-06 01:38:24 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1XrzzxzSdeKYS8284gGw6LEoQPBAVqRVYjoVmKwLM/GM1rggdReT5rzlIYi4/FVopP5xV/CxNh6ifmny/IuSnA==", "user"=>{"email"=>"carlos@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'carlos@gmail.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('carlos@gmail.com', '$2a$10$9kz5hwwRoCgiWyuEmQSuv.qVgLC2o8HfVSHyfi/BfmAZYutaj4gJO', '2015-06-06 01:38:24', '2015-06-06 01:38:24')[0m
+  [1m[35m (8.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2015-06-06 01:38:24', `current_sign_in_at` = '2015-06-06 01:38:24', `last_sign_in_ip` = '200.0.118.173', `current_sign_in_ip` = '200.0.118.173', `sign_in_count` = 1, `updated_at` = '2015-06-06 01:38:24' WHERE `users`.`id` = 1
+  [1m[36m (9.1ms)[0m  [1mCOMMIT[0m
+Redirected to https://devise-capgonzaga.c9.io/
+Completed 302 Found in 118ms (ActiveRecord: 21.1ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 01:38:24 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mTable Load (0.3ms)[0m  [1mSELECT `tables`.* FROM `tables`[0m
+  Rendered tables/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 43ms (Views: 36.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 01:39:21 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mTable Load (0.2ms)[0m  [1mSELECT `tables`.* FROM `tables`[0m
+  Rendered tables/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/layouts/application.html.erb:16: syntax error, unexpected =>, expecting keyword_end
+...y_user_session_path, :method => :delete 
+...                               ^):
+  app/views/layouts/application.html.erb:16: syntax error, unexpected =>, expecting keyword_end
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (32.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.5ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 01:40:06 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by TablesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mTable Load (0.5ms)[0m  [1mSELECT `tables`.* FROM `tables`[0m
+  Rendered tables/index.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 4.8ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/layouts/application.html.erb:16: syntax error, unexpected =>, expecting keyword_end
+...y_user_session_path, :method => :delete 
+...                               ^):
+  app/views/layouts/application.html.erb:16: syntax error, unexpected =>, expecting keyword_end
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.8ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 01:41:32 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mTable Load (0.2ms)[0m  [1mSELECT `tables`.* FROM `tables`[0m
+  Rendered tables/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 251ms (Views: 247.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 01:41:33 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mTable Load (0.2ms)[0m  [1mSELECT `tables`.* FROM `tables`[0m
+  Rendered tables/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 45ms (Views: 40.8ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 200.0.118.173 at 2015-06-06 01:41:35 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cRHahHWeJ+xRBLNcVzvY8uS4xmU54WAnDJpDiHjQKgQovZFrHFvB6HWqX2gNxj1y8W73wokG8mzM3j/iKFCLaQ=="}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to https://devise-capgonzaga.c9.io/
+Completed 302 Found in 19ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 01:41:35 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 200.0.118.173 at 2015-06-06 01:41:35 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 76ms (Views: 73.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 200.0.118.173 at 2015-06-06 01:41:42 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mwiMMeQvFMX8FVX00qvkmUfYde79MO+ypqBM5V1KkWdX3b6tFDUZIGIymAnioB9mFFyVEDQUbi4kk6nYCghz8w==", "user"=>{"email"=>"carlos@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'carlos@gmail.com'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `users` SET `current_sign_in_at` = '2015-06-06 01:41:42', `sign_in_count` = 2, `updated_at` = '2015-06-06 01:41:42' WHERE `users`.`id` = 1[0m
+  [1m[35m (5.8ms)[0m  COMMIT
+Redirected to https://devise-capgonzaga.c9.io/
+Completed 302 Found in 94ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 01:41:42 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mTable Load (0.2ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tables/new" for 200.0.118.173 at 2015-06-06 01:41:46 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered tables/_form.html.erb (3.1ms)
+  Rendered tables/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 47ms (Views: 40.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/tables" for 200.0.118.173 at 2015-06-06 01:42:13 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WXEiZbXqtZi3w1GzIdkfxEa7shotl+02Jsljcks575WEX3WhJsLL8KGR36Citea2++VoNnimLisYjxBffJPE7w==", "table"=>{"name"=>"Arquitectura", "description"=>"Edificios"}, "commit"=>"Create Table"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `tables` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Arquitectura', 'Edificios', '2015-06-06 01:42:13', '2015-06-06 01:42:13')
+  [1m[36m (4.6ms)[0m  [1mCOMMIT[0m
+Redirected to https://devise-capgonzaga.c9.io/tables/1
+Completed 302 Found in 11ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/tables/1" for 200.0.118.173 at 2015-06-06 01:42:13 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTable Load (0.3ms)[0m  SELECT  `tables`.* FROM `tables` WHERE `tables`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered tables/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 48ms (Views: 42.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tables/1/edit" for 200.0.118.173 at 2015-06-06 01:42:19 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTable Load (0.3ms)[0m  SELECT  `tables`.* FROM `tables` WHERE `tables`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered tables/_form.html.erb (2.1ms)
+  Rendered tables/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 45ms (Views: 41.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tables" for 200.0.118.173 at 2015-06-06 01:42:20 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mTable Load (0.2ms)[0m  [1mSELECT `tables`.* FROM `tables`[0m
+  Rendered tables/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 40ms (Views: 36.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tables/1" for 200.0.118.173 at 2015-06-06 01:42:59 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTable Load (0.3ms)[0m  SELECT  `tables`.* FROM `tables` WHERE `tables`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered tables/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tables" for 200.0.118.173 at 2015-06-06 01:43:04 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mTable Load (0.3ms)[0m  [1mSELECT `tables`.* FROM `tables`[0m
+  Rendered tables/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 66ms (Views: 61.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 01:44:14 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered tables/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/tables/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...d=( link_to 'Show', table table.name );@output_buffer.safe_a...
+...                               ^):
+  app/views/tables/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.6ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 01:45:19 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mTable Load (0.3ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 39ms (Views: 36.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 01:45:50 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mTable Load (0.3ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tables" for 200.0.118.173 at 2015-06-06 01:45:55 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mTable Load (0.2ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tables" for 200.0.118.173 at 2015-06-06 01:45:57 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mTable Load (0.3ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 01:46:09 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mTable Load (0.2ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `table' for #<#<Class:0x000000060cfae8>:0x007ff92aafa598>):
+    14:   <tbody>
+    15:     <% @tables.each do |table| %>
+    16:       <tr>
+    17:         <td><%= link_to table table.name %></td>
+    18:         <td><%= table.description %></td>
+    19:         <td><%= link_to 'Show', table %></td>
+    20:         <td><%= link_to 'Edit', edit_table_path(table) %></td>
+  app/views/tables/index.html.erb:17:in `block in _app_views_tables_index_html_erb___4550296084611352122_70354069866780'
+  app/views/tables/index.html.erb:15:in `_app_views_tables_index_html_erb___4550296084611352122_70354069866780'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.3ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 01:46:46 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mTable Load (0.5ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 50ms (Views: 46.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tables/1" for 200.0.118.173 at 2015-06-06 01:46:48 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTable Load (0.4ms)[0m  [1mSELECT  `tables`.* FROM `tables` WHERE `tables`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered tables/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 38ms (Views: 34.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tables" for 200.0.118.173 at 2015-06-06 01:46:52 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mTable Load (0.3ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 57ms (Views: 53.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tables/1" for 200.0.118.173 at 2015-06-06 01:46:54 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTable Load (0.4ms)[0m  [1mSELECT  `tables`.* FROM `tables` WHERE `tables`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered tables/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 40ms (Views: 36.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tables/1/edit" for 200.0.118.173 at 2015-06-06 01:46:55 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTable Load (0.4ms)[0m  [1mSELECT  `tables`.* FROM `tables` WHERE `tables`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered tables/_form.html.erb (1.8ms)
+  Rendered tables/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 36ms (Views: 33.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tables" for 200.0.118.173 at 2015-06-06 01:46:58 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mTable Load (0.2ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 01:47:36 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mTable Load (0.2ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tables/1" for 200.0.118.173 at 2015-06-06 01:47:39 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTable Load (0.3ms)[0m  [1mSELECT  `tables`.* FROM `tables` WHERE `tables`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered tables/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 54ms (Views: 49.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tables/1/edit" for 200.0.118.173 at 2015-06-06 01:47:41 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTable Load (0.3ms)[0m  [1mSELECT  `tables`.* FROM `tables` WHERE `tables`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered tables/_form.html.erb (2.3ms)
+  Rendered tables/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tables" for 200.0.118.173 at 2015-06-06 01:47:42 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mTable Load (0.3ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 42ms (Views: 38.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tables/new" for 200.0.118.173 at 2015-06-06 01:47:44 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered tables/_form.html.erb (1.8ms)
+  Rendered tables/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/tables" for 200.0.118.173 at 2015-06-06 01:47:56 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CIYxZ8GkktINFYTR5JzuSnkYCTHAwTKbCMsB2k/mev/VqGajUozsuhtHCsJn8Bc4xEbTHZXw8YY2jXL3eExRhQ==", "table"=>{"name"=>"Ingenieria", "description"=>"Procesos Ambientales"}, "commit"=>"Create Table"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `tables` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Ingenieria', 'Procesos Ambientales', '2015-06-06 01:47:56', '2015-06-06 01:47:56')
+  [1m[36m (5.5ms)[0m  [1mCOMMIT[0m
+Redirected to https://devise-capgonzaga.c9.io/tables/2
+Completed 302 Found in 11ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/tables/2" for 200.0.118.173 at 2015-06-06 01:47:56 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTable Load (0.4ms)[0m  SELECT  `tables`.* FROM `tables` WHERE `tables`.`id` = 2 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered tables/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 39.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tables" for 200.0.118.173 at 2015-06-06 01:47:57 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mTable Load (0.2ms)[0m  [1mSELECT `tables`.* FROM `tables`[0m
+  Rendered tables/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tables/2" for 200.0.118.173 at 2015-06-06 01:47:59 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTable Load (0.3ms)[0m  SELECT  `tables`.* FROM `tables` WHERE `tables`.`id` = 2 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered tables/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tables/2/edit" for 200.0.118.173 at 2015-06-06 01:48:01 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTable Load (0.4ms)[0m  SELECT  `tables`.* FROM `tables` WHERE `tables`.`id` = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered tables/_form.html.erb (2.2ms)
+  Rendered tables/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 42ms (Views: 38.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tables" for 200.0.118.173 at 2015-06-06 01:48:03 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mTable Load (0.3ms)[0m  [1mSELECT `tables`.* FROM `tables`[0m
+  Rendered tables/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 37.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 01:48:30 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mTable Load (0.2ms)[0m  [1mSELECT `tables`.* FROM `tables`[0m
+  Rendered tables/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 42ms (Views: 38.4ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for 200.0.118.173 at 2015-06-06 01:49:36 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NEtwfdhuI2a0VeWoBIL5es8oMBOMlRKGJbg5IwTo4cbpZSe5S0ZdDqIHa7uH7gAIcnbqP9mk0Zsb/koOM0LKvA=="}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to https://devise-capgonzaga.c9.io/
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 01:49:36 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 200.0.118.173 at 2015-06-06 01:49:36 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 200.0.118.173 at 2015-06-06 01:49:48 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UYi7uWYVNEbtHBpgwbhdwqmGFAYfuUhVaW/CvwAt9gnWM5iUKwTQ7cdsPx+luSNgsEBVtiBS5ipD1e0MjKCV+g==", "user"=>{"email"=>"carlos@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'carlos@gmail.com'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2015-06-06 01:41:42', `current_sign_in_at` = '2015-06-06 01:49:48', `sign_in_count` = 3, `updated_at` = '2015-06-06 01:49:48' WHERE `users`.`id` = 1[0m
+  [1m[35m (5.8ms)[0m  COMMIT
+Redirected to https://devise-capgonzaga.c9.io/
+Completed 302 Found in 93ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 01:49:48 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mTable Load (0.3ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 40ms (Views: 36.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/index.html" for 200.0.118.173 at 2015-06-06 01:56:26 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/index.html"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (60.4ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 02:43:11 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mTable Load (0.3ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 45ms (Views: 41.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tables/new" for 200.0.118.173 at 2015-06-06 02:44:58 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered tables/_form.html.erb (2.3ms)
+  Rendered tables/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 46ms (Views: 43.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/tables" for 200.0.118.173 at 2015-06-06 02:45:06 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uGtDU/vwTlmXVWvgcZHjkeNf/QBTWSk8HrJbO3bQqMM2wXxRZrk8UCQpXz2A3SlQjGouoQOnl+BEfPXPxhP12A==", "table"=>{"name"=>"Medicina", "description"=>"Clases"}, "commit"=>"Create Table"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `tables` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Medicina', 'Clases', '2015-06-06 02:45:06', '2015-06-06 02:45:06')
+  [1m[36m (7.9ms)[0m  [1mCOMMIT[0m
+Redirected to https://devise-capgonzaga.c9.io/tables/3
+Completed 302 Found in 25ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/tables/3" for 200.0.118.173 at 2015-06-06 02:45:06 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mTable Load (0.4ms)[0m  SELECT  `tables`.* FROM `tables` WHERE `tables`.`id` = 3 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered tables/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 67ms (Views: 57.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tables" for 200.0.118.173 at 2015-06-06 02:45:09 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mTable Load (0.3ms)[0m  [1mSELECT `tables`.* FROM `tables`[0m
+  Rendered tables/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for 200.0.118.173 at 2015-06-06 02:45:12 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NKHXj86pd0ksg04M2L0+3oLQXXKWQ1no5crsYYMiOFS6C+iNU+AFQJ//etEp8fQf7eWO08a95zS/BEKVM+FlTw=="}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to https://devise-capgonzaga.c9.io/
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 02:45:12 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 200.0.118.173 at 2015-06-06 02:45:13 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 200.0.118.173 at 2015-06-06 02:45:24 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 53ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 200.0.118.173 at 2015-06-06 02:45:38 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ym/qF+u2t2AYk6ESlymXvwNAmyYODu58Yh4dkloQ2143ejXFuZ0w2N4JazfNqSt9MnGQPSR+q9c2kyjihvwvtQ==", "user"=>{"email"=>"luis@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'luis@gmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('luis@gmail.com', '$2a$10$0LPe88bCfvPBCPQtKUFqW.BgQObOvSrrKr8OSloyUG.RnVGN1TvRW', '2015-06-06 02:45:38', '2015-06-06 02:45:38')[0m
+  [1m[35m (6.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2015-06-06 02:45:38', `current_sign_in_at` = '2015-06-06 02:45:38', `last_sign_in_ip` = '200.0.118.173', `current_sign_in_ip` = '200.0.118.173', `sign_in_count` = 1, `updated_at` = '2015-06-06 02:45:38' WHERE `users`.`id` = 2
+  [1m[36m (3.8ms)[0m  [1mCOMMIT[0m
+Redirected to https://devise-capgonzaga.c9.io/
+Completed 302 Found in 118ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 02:45:38 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mTable Load (0.2ms)[0m  [1mSELECT `tables`.* FROM `tables`[0m
+  Rendered tables/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tables/new" for 200.0.118.173 at 2015-06-06 02:46:33 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered tables/_form.html.erb (3.3ms)
+  Rendered tables/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 59ms (Views: 54.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/tables" for 200.0.118.173 at 2015-06-06 02:46:42 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J9qfIkQGN2RN8T+/DqWOzsgRIbmAZjhh7422fnSWmDNyz0DwFi2w3Itr9ZpUJTIM+SAqoqoWfcq7AIMOqHps2A==", "table"=>{"name"=>"Marketing", "description"=>"AAAAAAA"}, "commit"=>"Create Table"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `tables` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Marketing', 'AAAAAAA', '2015-06-06 02:46:42', '2015-06-06 02:46:42')[0m
+  [1m[35m (4.3ms)[0m  COMMIT
+Redirected to https://devise-capgonzaga.c9.io/tables/4
+Completed 302 Found in 11ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/tables/4" for 200.0.118.173 at 2015-06-06 02:46:42 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTable Load (0.4ms)[0m  [1mSELECT  `tables`.* FROM `tables` WHERE `tables`.`id` = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered tables/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 40ms (Views: 36.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tables" for 200.0.118.173 at 2015-06-06 02:46:44 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mTable Load (0.7ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 90ms (Views: 83.8ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/tables/4" for 200.0.118.173 at 2015-06-06 02:46:55 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iCJxyBaLglSe2l4O0Y/ECqdAyMnsHd8YGMTBcnKiT/bdN64aRKAF7FhAlCuLD3jIlnHD0sZtmrNMSfQCrk67HQ==", "id"=>"4"}
+  [1m[36mTable Load (0.4ms)[0m  [1mSELECT  `tables`.* FROM `tables` WHERE `tables`.`id` = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM `tables` WHERE `tables`.`id` = 4
+  [1m[36m (5.6ms)[0m  [1mCOMMIT[0m
+Redirected to https://devise-capgonzaga.c9.io/tables
+Completed 302 Found in 14ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/tables" for 200.0.118.173 at 2015-06-06 02:46:55 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mTable Load (0.3ms)[0m  [1mSELECT `tables`.* FROM `tables`[0m
+  Rendered tables/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 44ms (Views: 39.8ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 200.0.118.173 at 2015-06-06 02:47:10 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fH/JjNHY2lEAzpFcIZn6DYJU3BmhXPemYspuPJXwyCgpahZeg/Nd6cZUW3l7GUbPs2XXAosssg02R1tMSRw8ww=="}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to https://devise-capgonzaga.c9.io/
+Completed 302 Found in 7ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 02:47:10 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 200.0.118.173 at 2015-06-06 02:47:10 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 200.0.118.173 at 2015-06-06 02:48:35 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 59ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 200.0.118.173 at 2015-06-06 02:52:40 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XPRxk8qxcGAx3kbZTSZNmTi7PrBn4CKhsnx/vdrVwJLmr97SF7+Jasvi7b/UETCKZ9QC0N1l8Y7FBPe7a+3rOw==", "user"=>{"email"=>"carlos@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'carlos@gmail.com'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2015-06-06 01:49:48', `current_sign_in_at` = '2015-06-06 02:52:40', `sign_in_count` = 4, `updated_at` = '2015-06-06 02:52:40' WHERE `users`.`id` = 1[0m
+  [1m[35m (5.2ms)[0m  COMMIT
+Redirected to https://devise-capgonzaga.c9.io/
+Completed 302 Found in 92ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 02:52:40 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mTable Load (0.3ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 42ms (Views: 39.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tables/1" for 200.0.118.173 at 2015-06-06 02:53:13 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTable Load (0.4ms)[0m  [1mSELECT  `tables`.* FROM `tables` WHERE `tables`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered tables/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 41ms (Views: 37.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tables" for 200.0.118.173 at 2015-06-06 02:53:18 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mTable Load (0.3ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tables/1/edit" for 200.0.118.173 at 2015-06-06 02:53:35 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTable Load (0.4ms)[0m  [1mSELECT  `tables`.* FROM `tables` WHERE `tables`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered tables/_form.html.erb (2.2ms)
+  Rendered tables/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 46ms (Views: 42.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tables" for 200.0.118.173 at 2015-06-06 02:53:37 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mTable Load (0.3ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tables" for 200.0.118.173 at 2015-06-06 02:53:58 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mTable Load (0.3ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 200.0.118.173 at 2015-06-06 02:54:01 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"d1CN/7A060SiUkWTw7iZ0PPG3Yp/GwFDefeONsN03jY6uneOfBKEF16cnMiqSjea21OzQFtXVx7lCYKCTNrB/w=="}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to https://devise-capgonzaga.c9.io/
+Completed 302 Found in 10ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 02:54:01 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 200.0.118.173 at 2015-06-06 02:54:01 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 200.0.118.173 at 2015-06-06 02:54:52 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 309ms (Views: 278.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/sign_up" for 200.0.118.173 at 2015-06-06 02:54:54 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 46ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 200.0.118.173 at 2015-06-06 02:54:55 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 72ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 200.0.118.173 at 2015-06-06 02:54:57 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 200.0.118.173 at 2015-06-06 02:55:10 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mQAbxg1hnJL+2+JjFKhHJxc1Nc8l6M0rt+qxWGUq7YADItOjNrSQEuwsHNlOEd0S6tpwGLBafeU+x8jkqxSimw==", "user"=>{"email"=>"jose@xxx.mail", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jose@xxx.mail' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('jose@xxx.mail', '$2a$10$Kyym6xfMl78gKqwP0WvLlu6cd5gvVZQbGfBGQ1X4sOfsoJo/y/5Gu', '2015-06-06 02:55:10', '2015-06-06 02:55:10')
+  [1m[36m (6.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2015-06-06 02:55:10', `current_sign_in_at` = '2015-06-06 02:55:10', `last_sign_in_ip` = '200.0.118.173', `current_sign_in_ip` = '200.0.118.173', `sign_in_count` = 1, `updated_at` = '2015-06-06 02:55:10' WHERE `users`.`id` = 3[0m
+  [1m[35m (4.7ms)[0m  COMMIT
+Redirected to https://devise-capgonzaga.c9.io/
+Completed 302 Found in 123ms (ActiveRecord: 12.9ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 02:55:10 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mTable Load (0.2ms)[0m  SELECT `tables`.* FROM `tables`
+  Rendered tables/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 49ms (Views: 41.6ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/users/sign_out" for 200.0.118.173 at 2015-06-06 02:58:40 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"u4uFZVDfIYWH8XHW53Ueb9DKQOF3M2d83/M9voy4PfAhqU0AawotBZUGj2y9zIRaLSUFNuKB17JW3kQCQoZy6w=="}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to https://devise-capgonzaga.c9.io/
+Completed 302 Found in 9ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 200.0.118.173 at 2015-06-06 02:58:40 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TablesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 200.0.118.173 at 2015-06-06 02:58:41 +0000
+Cannot render console from 200.0.118.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 41ms (Views: 38.7ms | ActiveRecord: 0.0ms)

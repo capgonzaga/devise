@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Devise Project</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <div id="container">
+    <div id="user_nav">
+      <% if user_signed_in? %>
+        Logueado como: <%= current_user.email%>.|
+        <%= link_to "Salir", destroy_user_session_path, :method => :delete %>
+      <% else %>
+        <%= link_to "Registrate" , new_user_registration_path %> o
+        <%= link_to "Logueate" , new_user_session_path %>
+      <% end %>
+    </div>
+      <%= yield %>
+    </div>
+  </div>
+</body>
+</html>
